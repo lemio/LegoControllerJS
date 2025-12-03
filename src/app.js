@@ -69,6 +69,7 @@ async function connectToHub() {
         });
 
     } catch (error) {
+        // Re-throw to be caught by the outer handler which displays the error to the user
         throw error;
     }
 }
@@ -277,6 +278,8 @@ function addGenericSensorDisplay(container, device) {
     container.appendChild(info);
 
     // Try to subscribe to any common events
+    // Note: Only one event will typically fire for a given device type,
+    // so the display will show whichever event the device supports
     if (device) {
         const events = ['distance', 'color', 'tilt', 'rotate', 'speed'];
         events.forEach(eventName => {

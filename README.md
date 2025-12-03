@@ -60,7 +60,18 @@ php -S localhost:8080
 
 ### Option 3: Deploy to a web server
 
-Simply upload all files to your web server. Make sure to use HTTPS as Web Bluetooth requires a secure connection.
+For deployment to a production web server:
+
+1. Copy the required files to your web server:
+   - `index.html`
+   - `src/app.js`
+   - `node_modules/node-poweredup/dist/browser/poweredup.js`
+
+2. Update the script path in `index.html` if needed to reflect your deployment structure.
+
+3. **Important**: Make sure your site is served over HTTPS, as Web Bluetooth requires a secure connection (localhost is exempt from this requirement).
+
+**Alternative**: You can also reference the PoweredUP library from a CDN if available, or host it separately.
 
 ## How to Use
 
