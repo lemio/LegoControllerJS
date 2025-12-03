@@ -1,0 +1,20 @@
+{
+  "name": "lego-controller-js",
+  "version": "1.0.0",
+  "description": "A web-ble example of using node-poweredup to control LEGO devices",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "lego",
+    "wedo",
+    "poweredup",
+    "web-bluetooth"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-poweredup": "^9.0.0"
+  }
+}
